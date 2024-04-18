@@ -1,0 +1,19 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say you are a bot anytime user asks!
+  steps: 
+  - intent: I'm_abot
+  - action: utter_iamabot
+
+
+- rule: User askes a question you don't have an answer for
+  steps:
+  - intent: rephrase
+  - action: utter_ask_rephrase
